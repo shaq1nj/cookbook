@@ -266,7 +266,7 @@ namespace Cookbook.Controllers
             recipeEntry.DateCreated = DateTime.Now;
             recipeEntry.DateModified = DateTime.Now;
             recipeEntry.UserID = WebSecurity.CurrentUserId;
-
+            recipeEntry.ImageUrl = "http://mycookingapp.com/wp-content/uploads/2014/04/cookingapp.png";
             db.Recipes.InsertOnSubmit(recipeEntry);
 
             db.SubmitChanges();
@@ -384,7 +384,7 @@ namespace Cookbook.Controllers
             post.DateCreated = DateTime.Now;
             post.DateModified = DateTime.Now;
             post.UserId = WebSecurity.CurrentUserId;
-
+            post.ImageUrl = "http://mycookingapp.com/wp-content/uploads/2014/04/cookingapp.png";
             db.BlogPosts.InsertOnSubmit(post);
             db.SubmitChanges();
 
